@@ -33,9 +33,11 @@
         (itemsPerPageChange)="updateItemsPerPage($event)"
       ></app-pagination>
     </div>
-    <div *ngIf="repos.length <= 0">
-      <div #loadingUserFinish class="text-2xl font-medium">
-        {{ searchedUser?.login }} doesn’t have any public repositories yet.
+    <div *ngIf="isValidUser">
+      <div *ngIf="repos.length <= 0">
+        <div #loadingUserFinish class="text-2xl font-medium">
+          {{ searchedUser?.login }} doesn’t have any public repositories yet.
+        </div>
       </div>
     </div>
   </div>

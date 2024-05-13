@@ -1,10 +1,15 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 describe('AppComponent', () => {
-  beforeEach(() => TestBed.configureTestingModule({
-    declarations: [AppComponent]
-  }));
+  beforeEach(() => { TestBed.configureTestingModule({
+    declarations: [AppComponent],
+    imports:[
+      HttpClientModule, FormsModule
+    ]
+  })});
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);

@@ -1,0 +1,49 @@
+<div
+  class="flex flex-col md:flex-row items-center mt-6 mb-4 justify-start gap-8"
+>
+  <div md:mr-4 animate-fade-right rounded-full>
+    <ngx-skeleton-loader
+      appearance="circle"
+      [theme]="skeletonThemeCircle"
+      class="md:mr-4 w-52 h-52"
+      [animation]="animation"
+    >
+    </ngx-skeleton-loader>
+  </div>
+  <div>
+    <div class="mb-2 w-42">
+      <ngx-skeleton-loader
+        appearance="circle"
+        [theme]="skeletonTheme"
+        [animation]="animation"
+      ></ngx-skeleton-loader>
+    </div>
+
+    <p class="text-gray-800 dark:text-gray-100 text-base"></p>
+    <div
+      class="flex gap-4 mb-1 dark:text-gray-100 flex items-center justify-start"
+    >
+      <div class="mb-2 w-8">
+        <ngx-skeleton-loader
+          appearance="circle"
+          [theme]="skeletonTheme"
+          [animation]="animation"
+        ></ngx-skeleton-loader>
+      </div>
+      <div class="mb-2 w-36">
+        <ngx-skeleton-loader
+          appearance="circle"
+          [theme]="skeletonTheme"
+          [animation]="animation"
+        ></ngx-skeleton-loader>
+      </div>
+      <div class="mb-2 w-36">
+        <ngx-skeleton-loader
+          appearance="circle"
+          [theme]="skeletonTheme"
+          [animation]="animation"
+        ></ngx-skeleton-loader>
+      </div>
+    </div>
+  </div>
+</div>

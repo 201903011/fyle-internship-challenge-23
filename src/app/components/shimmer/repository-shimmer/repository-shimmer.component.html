@@ -1,0 +1,50 @@
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+  <div
+    *ngFor="let time of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+    class="bg-gray-100 border shadow-lg rounded-xl p-4 flex flex-col justify-between hover:bg-gray-200 transition duration-300 ease-in-out animate-fade"
+  >
+    <div class="flex justify-between mb-4">
+      <div class="mb-2 w-28 h-8">
+        <ngx-skeleton-loader
+          appearance="circle"
+          [theme]="skeletonTheme"
+          [animation]="animation"
+        ></ngx-skeleton-loader>
+      </div>
+      <div class="mb-2 w-8 h-8">
+        <ngx-skeleton-loader
+          appearance="circle"
+          [theme]="skeletonTheme"
+          [animation]="animation"
+        ></ngx-skeleton-loader>
+      </div>
+    </div>
+
+    <div class="w-52 h-28 mb-4">
+      <ngx-skeleton-loader
+        appearance="circle"
+        [theme]="skeletonTheme"
+        [animation]="animation"
+      ></ngx-skeleton-loader>
+    </div>
+
+    <div class="mt-4">
+      <div class="flex flex-wrap">
+        <div class="w-12 h-6 mr-4">
+          <ngx-skeleton-loader
+            appearance="circle"
+            [theme]="skeletonTheme"
+            [animation]="animation"
+          ></ngx-skeleton-loader>
+        </div>
+        <div class="w-12 h-6">
+          <ngx-skeleton-loader
+            appearance="circle"
+            [theme]="skeletonTheme"
+            [animation]="animation"
+          ></ngx-skeleton-loader>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

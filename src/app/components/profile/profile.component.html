@@ -5,13 +5,13 @@
     <img
       alt="Avatar"
       class="w-52 h-52 rounded-full shadow-[4.0px_8.0px_4.0px_rgba(0,0,0,0.38)]"
-      src="https://avatars.githubusercontent.com/u/72931833?v=4"
+      [src]="searchedUser?.avatar_url"
     />
   </div>
   <div class="animate-fade-right">
     <div class="mb-2">
       <p class="text-2xl font-medium dark:text-white">
-        <a href="https://github.com/201903011">201903011</a>
+        <a [href]="searchedUser?.html_url">{{ searchedUser?.login }}</a>
       </p>
       <p></p>
     </div>
@@ -21,9 +21,13 @@
       class="flex gap-4 mb-1 dark:text-gray-100 flex items-center justify-start"
     >
       <i class="fas fa-user-group" style="font-size: 15px"> </i>
-      <p class="font-medium dark:text-gray-100">Followers: 1</p>
+      <p class="font-medium dark:text-gray-100">
+        Followers: {{ searchedUser?.followers }}
+      </p>
 
-      <p class="font-medium dark:text-gray-100">Following: 2</p>
+      <p class="font-medium dark:text-gray-100">
+        Following: {{ searchedUser?.following }}
+      </p>
     </div>
   </div>
 </div>
